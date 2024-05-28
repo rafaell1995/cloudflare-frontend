@@ -4,7 +4,7 @@ function HomePage() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch('http://seu-dominio.com/wp-json/wp/v2/posts')
+    fetch(`${process.env.REACT_APP_API_URL}/wp-json/wp/v2/posts`)
     .then(response => response.json())
     .then(data => setPosts(data))
     .catch(err => console.error(err));
