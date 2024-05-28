@@ -15,7 +15,7 @@ function HomePage() {
       <h1>Posts Recentes</h1>
       <ul>
         {posts.map(post => (
-          <li key={post.id}>{post.title.rendered}</li>
+          <li key={post.id}><a href={post.link} target="_blank" rel="noreferrer">{post.title.rendered}</a></li>
         ))}
       </ul>
     </div>
